@@ -1,0 +1,7 @@
+{
+  "name": "eje01_ListTareasFire",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
