@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TasksService } from '../services/tasks.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor() {}
+  public task: Task[];
+  constructor(private taskSer:TasksService) {
+    this.taskSer.getTask().subscribe(resp=>{
+      this.task = resp
+    });
+  }
 
 }
