@@ -19,8 +19,14 @@
           <ion-card-subtitle> {{item.tarea}}</ion-card-subtitle>
         </ion-card-header>
       </ion-row>
-      <ion-button fill="clear" title="Marcar como completo"
-        ><ion-icon name="checkbox-outline"></ion-icon
+      <ion-button
+        fill="clear"
+        title="Marcar como completo"
+        (click)="saveComplete(item.id,item.titulo,item.fechaIni,item.fechaFin,item.tarea)"
+        ><ion-icon name="clipboard-outline"></ion-icon
+      ></ion-button>
+      <ion-button (click)="removeTask(item.id)"
+        ><ion-icon name="trash-outline"></ion-icon
       ></ion-button>
     </ion-card>
   </ng-container>

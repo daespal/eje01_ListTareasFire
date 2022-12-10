@@ -19,7 +19,10 @@
           <ion-card-subtitle> {{item.tarea}}</ion-card-subtitle>
         </ion-card-header>
       </ion-row>
-      <ion-button fill="clear" title="Marcar como completo"
+      <ion-button
+        fill="clear"
+        title="Marcar como completo"
+        (click)="saveComplete(item.id,item.titulo,item.fechaIni,item.fechaFin,item.tarea)"
         ><ion-icon name="checkbox-outline"></ion-icon
       ></ion-button>
       <ion-button (click)="removeTask(item.id)"
