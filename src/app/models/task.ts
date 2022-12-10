@@ -4,6 +4,6 @@ export class Task {
     fechaIni:string;
     fechaFin:string;
     tarea:string;
-    completo:number;
+    
 
 }
